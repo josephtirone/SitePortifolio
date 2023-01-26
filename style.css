@@ -1,0 +1,225 @@
+*{
+    background-color: rgb(28, 32, 34);
+
+    font-family: "Roboto Condensed";
+    color: white;
+}
+
+
+header{
+    width: 100vw;
+
+    padding: 15px;
+    display: flex;
+    position: relative;
+}
+
+header svg{
+    width: 40px;
+    padding-left: 15px;
+    fill: white;
+    position: relative;
+
+}
+
+a:first-of-type {
+    position: relative;
+}
+
+a:first-of-type:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: rgb(28, 32, 34);
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.right-icons{
+    position: absolute;
+    right:100px;
+}
+.image-container-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-container {
+  position: relative;
+  align-self: flex-end;
+  margin-left: 400px;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+  position:absolute;
+  left: 0;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 248, 255, 0);
+  
+}
+
+#name{
+    font-size: 2rem;
+    font-family: Roboto Condensed;
+}
+
+.inicio{
+    display: flex;
+    width: 100vw;
+
+}
+
+.left-div{
+    max-width: 35vw;
+    margin-left: 5%;
+}
+
+
+.subtitle{
+    font-size: 4em;
+    display: inline-block;
+    align-items: center;
+    display: inline;
+}
+
+.underlined{
+    font-size: 4rem;
+    text-decoration:3px underline rgb(0, 255, 136);
+    display: inline;
+    text-underline-offset: 10px;
+
+}
+
+#about-me{
+    font-size: 2rem;
+
+}
+
+#profile-image{
+    display: inline-block;
+    width: min(100%, 500px);
+    padding-right: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.end-section{
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    margin-left: 5%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+
+
+  @media screen and (max-width: 1000px) {
+    #segunda-parte{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .content-container{
+    height: 200px;
+    border: 1px white solid;
+    margin: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  .content-container svg{
+    height: 50px;
+    fill: white;
+    padding: 10px;
+  }
+
+  .content-container p {
+    font-size: 1rem;
+  }
+
+  #projects-container{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .project-content{
+    width: 800px;
+    height: 410px;
+    border: 1px white solid;
+    margin: 5px;
+    padding-left: 5px;
+    margin-right: 50px;
+    margin-left: 90px;
+    font-size: 1.8rem;
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0);
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    backdrop-filter: blur(5px);
+    color: black;
+    transition: opacity .2s;
+  }
+
+  .buttons:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .buttons a {
+    padding: 10px;
+    background-color: rgb(28, 32, 34);
+    border-radius: 5px;
+  }
+  .project-content img{
+    width: 750px;
+    height: 350px;
+
+  }
+
+  .project-content h4{
+    margin-top: -5px;
+    font-size: 1rem;
+  }
+
+  footer{
+    margin-top: 90px;
+    height: 50px;
+    margin-left: -100px;
+    background-color: rgb(8, 10, 10);
+  }
+
+  footer h4{
+    margin-left: 100px;
+    padding-top: 20px;
+    background-color: rgb(8, 10, 10);
+  }
+
