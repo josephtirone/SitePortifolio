@@ -1,17 +1,39 @@
-*{
-    background-color: rgb(28, 32, 34);
-
-    font-family: "Roboto Condensed";
-    color: white;
+:root {
+  --header-height: 70px;
 }
+
+html,
+body {
+  color: white;
+  font-family: "Roboto Condensed";
+  overflow-x: hidden;
+  background-color: rgb(28, 32, 34);
+  margin: 0;
+  padding-top: calc(var(--header-height) / 2);
+}
+
+a {
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
 header{
     width: 100vw;
-
-    padding: 15px;
+    padding:  0 15px;
     display: flex;
-    position: relative;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(28,32,34,1) 0%, rgba(28,32,34,1) 50%, rgba(8,10,10,1) 100%);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    height: var(--header-height);
 }
 
 header svg{
@@ -45,15 +67,15 @@ a{
     position: absolute;
     right:100px;
 }
-.image-container-container {
+
+.image-container {
   display: flex;
   justify-content: flex-end;
 }
 
-.image-container {
+.image-container-container {
   position: relative;
-  align-self: flex-end;
-  margin-left: 400px;
+  width: min(100%, 500px);
 }
 
 .circle {
@@ -63,7 +85,7 @@ a{
   border: 1px solid white;
   position:absolute;
   left: 0;
-  bottom: 10px;
+  top: 300px;
   transform: translate(-50%, -50%);
   background-color: rgba(240, 248, 255, 0);
   
@@ -77,13 +99,13 @@ a{
 .inicio{
     display: flex;
     width: 100vw;
-
+    justify-content: space-evenly;
 }
 
 .left-div{
     max-width: 35vw;
-    margin-left: 5%;
 }
+
 
 
 .subtitle{
@@ -109,7 +131,6 @@ a{
 #profile-image{
     display: inline-block;
     width: min(100%, 500px);
-    padding-right: 150px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -118,27 +139,38 @@ a{
     width: 90%;
     height: 1px;
     background-color: white;
-    margin-left: 5%;
     margin-bottom: 100px;
     margin-top: 50px;
 }
 
+#segunda-parte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
+#terceira-parte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 0 20px;
+}
 
-  @media screen and (max-width: 1000px) {
-    #segunda-parte{
-      display: flex;
-      flex-direction: column;
-    }
-  }
 
   .content-container{
     height: 200px;
     border: 1px white solid;
-    margin: 10px;
-    padding-left: 5px;
-    padding-top: 5px;
+    padding: 20px;
     font-size: 2rem;
     display: inline-block;
   }
@@ -153,25 +185,37 @@ a{
   }
 
   #projects-container{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
+
+  @media screen and (width < 2500px) {
+    #projects-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (width < 1650px) {
+    #projects-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
 
   .project-content{
     width: 800px;
-    height: 410px;
     border: 1px white solid;
-    margin: 5px;
-    padding-left: 5px;
-    margin-right: 50px;
-    margin-left: 90px;
     font-size: 1.8rem;
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
     position: relative;
   }
+
+
 
   .buttons{
     display: flex;
@@ -180,7 +224,7 @@ a{
     position: absolute;
     background-color: rgba(240, 248, 255, 0);
     width: inherit;
-    height: inherit;
+    height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
@@ -201,25 +245,52 @@ a{
   }
   .project-content img{
     width: 750px;
-    height: 350px;
-
+    margin: auto;
   }
+
+
 
   .project-content h4{
     margin-top: -5px;
     font-size: 1rem;
   }
 
+  @media screen and (width < 850px){
+      
+    .project-content{
+      width: 90vw;
+    }
+
+    .project-content img{
+      width: 90vw;
+    }
+    }
+
   footer{
-    margin-top: 90px;
-    height: 50px;
-    margin-left: -100px;
-    background-color: rgb(8, 10, 10);
+    height: var(--header-height);
+    background: linear-gradient(-90deg, rgba(28,32,34,1) 0%, rgba(28,32,34,1) 50%, rgba(8,10,10,1) 100%);
   }
 
   footer h4{
     margin-left: 100px;
     padding-top: 20px;
-    background-color: rgb(8, 10, 10);
   }
 
+
+  .right-div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media screen and (width < 1300px) {
+    .left-div{
+      max-width: none;
+      padding: 20px;
+  }
+    .inicio{
+      flex-direction: column;
+  }
+  .image-container, .right-div {
+    justify-content: center;
+  }
+  }
