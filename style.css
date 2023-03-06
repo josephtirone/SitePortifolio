@@ -48,16 +48,7 @@ a:first-of-type {
     position: relative;
 }
 
-a:first-of-type:after{
-    content: "";
-    width: 5px;
-    height: 5px;
-    background-color: rgb(28, 32, 34);
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
 
 a{
     text-decoration: none;
